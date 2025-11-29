@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voy de  shopping! - Encuentra lo que necesitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bag-heart">Voy de shopping!</i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"> Voy de shopping!</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Comienza</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">¿Ya nos conoces?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mira lo que hay</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ir a tus ofertas</a>
+                    </li>
+                   
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="input-group me-3" style="max-width: 300px;">
+                        <input type="text" class="form-control" placeholder="¿Qué estás buscando?">
+                        <button class="btn btn-outline-primary" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    <a href="#" class="btn btn-outline-primary me-2 position-relative">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-primary position-relative" id="cartButton">
+                        <i class="bi bi-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Encuentras exactamente lo que necesitas.</h1>
+                    <p>Tenemos todo organizadito para que encuentres fácilmente lo que buscas</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#" class="btn btn-light btn-lg">Comienza a explorar</a>
+                        <a href="#" class="btn btn-outline-light btn-lg">Tus ofertas</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Persona feliz con compras" class="img-fluid hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container mb-5">
+        <div class="section-header">
+            <h2>Aquí encontrarás todo organizado</h2>
+            <p></p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h5>Tech</h5>
+                    <p>Los gadgets más cool para mantenerte en línea</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Echar un vistazo</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="bi bi-house-door"></i>
+                    </div>
+                    <h5>Hogar</h5>
+                    <p>Haz de tu casa un abrazo</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Echar un vistazo</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="bi bi-bag"></i>
+                    </div>
+                    <h5>Moda</h5>
+                    <p>Tu decides el estilo, tenemos una gran colección </p>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Echar un vistazo</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="bi bi-heart-pulse"></i>
+                    </div>
+                    <h5>Bienestar</h5>
+                    <p>Cuídate con nuestros productos</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Echar un vistazo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold">Productos destacados</h2>
+            <a href="#" class="btn btn-outline-primary">Ver todos los productos</a>
+        </div>
+        <div class="row g-4" id="featuredProducts">
+            <!-- Los productos se cargarán aquí con JavaScript -->
+        </div>
+    </section>
+
+ <!-- Features Section -->
+    <section class="container mb-5">
+        <div class="row g-4">
+            <div class="col-md-4 text-center feature-item">
+                <div class="feature-icon">
+                    <i class="bi bi-truck"></i>
+                </div>
+                <h5>Llegamos rapidito a tu casa</h5>
+                <p class="text-muted">Tu pedido estará contigo en menos de 48 horas, ¡te lo prometemos!</p>
+            </div>
+            <div class="col-md-4 text-center feature-item">
+                <div class="feature-icon">
+                    <i class="bi bi-shield-check"></i>
+                </div>
+                <h5>Compra tranquilo, compra seguro</h5>
+                <p class="text-muted">Si no te encanta, te devolvemos tu dinero sin complicaciones</p>
+            </div>
+            <div class="col-md-4 text-center feature-item">
+                <div class="feature-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+                <h5>Estamos aquí para ayudarte</h5>
+                <p class="text-muted">Nuestro equipo  te acompaña en lo que necesites</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container mb-5">
+        <div class="section-header">
+            <h2>Lo que cuenta nuestra familia de clientes</h2>
+            <p>Personas como tú que ya han vivido la experiencia</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://media.istockphoto.com/id/1405156781/es/foto/hombre-y-mujer-de-negocios-se-dan-la-mano-como-hola-en-primer-plano-de-la-oficina.jpg?s=612x612&w=0&k=20&c=oUmhZfVVE322fPyvateozczCeR3KBRMU_XqUin9tqd4=" alt="Cliente satisfecho" class="testimonial-avatar me-3">
+                        <div>
+                            <h6 class="mb-0">María González</h6>
+                            <small class="text-muted">Nos visita seguido</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"Me encanta comprar aquí. Siento que me tratan como amiga y siempre encuentro cosas bonitas. ¡Me siento super bien atendida!"</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Cliente satisfecho" class="testimonial-avatar me-3">
+                        <div>
+                            <h6 class="mb-0">Carlos Rodríguez</h6>
+                            <small class="text-muted">Primera vez por aquí</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"¡Qué sorpresa más buena! El pedido llegó super rápido y todo perfecto. Definitivamente volveré, me encantó la experiencia."</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Cliente satisfecho" class="testimonial-avatar me-3">
+                        <div>
+                            <h6 class="mb-0">Ana López</h6>
+                            <small class="text-muted">De la familia desde 2020</small>
+                        </div>
+                    </div>
+                    <p class="mb-0">"El servicio al cliente es increíble. Tuve un problemita con un pedido y lo solucionaron súper rápido. ¡Voy de Shopping es genial!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="container mb-5">
+        <div class="newsletter-section">
+            <h3>¡No te pierdas nada bonito!</h3>
+            <p>Apúntate  te contamos primero las novedades y ofertas especiales</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Déjanos tu email aquí">
+                        <button class="btn btn-primary">¡Quiero enterarme!</button>
+                    </div>
+                    <small class="text-muted mt-2 d-block">Tranquilo, no mandamos spam. Puedes decir adiós cuando quieras.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="bi bi-bag-heart me-2"></i>Voy de shoping!
+                    </h5>
+                    <p>Tu rincón favorito para compras online. Nos encanta hacerte la vida más fácil y bonita con productos especiales y un trato cercano.</p>
+                    <div class="d-flex gap-3 social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3">Pasea por aquí</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Empieza aquí</a></li>
+                        <li class="mb-2"><a href="#">Mira lo que hay</a></li>
+                        <li class="mb-2"><a href="#">Ofertas especiales</a></li>
+                        <li class="mb-2"><a href="#">Conócenos</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3">Te ayudamos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Hablemos</a></li>
+                        <li class="mb-2"><a href="#">Cómo te lo enviamos</a></li>
+                        <li class="mb-2"><a href="#">Si quieres devolver algo</a></li>
+                        <li class="mb-2"><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Ven a visitarnos</h5>
+                    <p><i class="bi bi-geo-alt me-2"></i> Calle Principal 123, Ciudad</p>
+                    <p><i class="bi bi-telephone me-2"></i> +1 234 567 890</p>
+                    <p><i class="bi bi-envelope me-2"></i> hola@voydeshopping.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">Hecho con 💜 para ti - 2026 Voy de shopping</p>
+            </div>
+        </div>
+    </footer>
+ <!-- Cart Notification -->
+    <div class="cart-notification" id="cartNotification">
+        <i class="bi bi-check-circle"></i>
+        <span id="notificationText">¡Listo! Agregado a tu bolsa</span>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
+    
+   
+</body>
+</html>
