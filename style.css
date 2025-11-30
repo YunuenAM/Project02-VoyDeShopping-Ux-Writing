@@ -1,5 +1,4 @@
- 
-        :root {
+ :root {
             --primary-color: #6a5acd;
             --primary-light: #8a7cff;
             --primary-dark: #4c3cb3;
@@ -572,6 +571,11 @@
             
             .navbar .input-group {
                 margin-bottom: 1rem;
+                max-width: 100% !important;
+            }
+            
+            .navbar-collapse {
+                padding-top: 1rem;
             }
         }
         
@@ -659,4 +663,3 @@
             background-color: var(--primary-dark);
             transform: translateY(-3px);
         }
- 

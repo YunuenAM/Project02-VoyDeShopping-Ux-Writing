@@ -1,5 +1,4 @@
-
-        // Productos de ejemplo
+ // Productos de ejemplo
         const products = [
             {
                 id: 1,
